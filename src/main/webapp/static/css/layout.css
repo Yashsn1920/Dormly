@@ -1,0 +1,35 @@
+.site-header { position: sticky; z-index: 20; top: 0; display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 76px; padding: 12px max(24px, calc((100vw - 1120px) / 2)); border-bottom: 3px solid var(--ink); background: var(--paper); }
+.brand { display: inline-flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; }
+.brand-mark { display: block; width: 44px; height: 44px; object-fit: contain; }
+.brand-name { color: var(--ink); font: 700 1.2rem/1.05 var(--font-display); letter-spacing: -.02em; }
+.site-nav { display: flex; align-items: center; gap: 6px; }
+.site-nav a { padding: 8px 10px; font: 700 .72rem var(--font-mono); text-decoration: none; }
+.site-nav a[aria-current="page"] { border: 2px solid var(--ink); background: var(--accent); }
+.header-user { display: flex; align-items: center; gap: 8px; }
+.header-user strong { max-width: 150px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.header-user form { margin: 0; }
+.header-user .btn { min-height: 36px; padding: 6px 10px; }
+.mobile-menu { display: none; }
+.page-shell { width: min(1120px, calc(100% - 48px)); min-height: calc(100vh - 150px); margin: 32px auto 64px; }
+.site-footer { padding: 16px 24px; border-top: 3px solid var(--ink); background: var(--paper); color: var(--muted); font: .7rem var(--font-mono); text-align: center; }
+.public-shell { width: min(1120px, calc(100% - 48px)); min-height: calc(100vh - 132px); margin: 48px auto; }
+.public-header { justify-content: flex-start; }
+
+@media (max-width: 900px) {
+  .site-header { flex-wrap: wrap; padding-inline: 16px; }
+  .mobile-menu { display: block; }
+  .mobile-menu summary { padding: 8px 12px; border: 2px solid var(--ink); background: var(--accent); font: 700 .75rem var(--font-mono); cursor: pointer; }
+  .site-nav { display: none; width: 100%; flex-direction: column; align-items: stretch; }
+  .mobile-menu[open] .site-nav { display: flex; }
+  .site-nav a { border: 2px solid var(--ink); }
+  .header-user { margin-left: auto; }
+}
+
+@media (max-width: 640px) {
+  .page-shell, .public-shell { width: calc(100% - 32px); margin-top: 24px; }
+  .site-header { gap: 12px; }
+  .brand-name { font-size: .82rem; }
+  .header-user strong { display: none; }
+  .stat-panel { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .page-title { align-items: flex-start; flex-direction: column; }
+}

@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dormly · UI Styleguide</title>
+  <link rel="icon" href="img/dormly-logo.png" type="image/png">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/print.css" media="print">
+  <script src="js/app.js" defer></script>
+</head>
+<body class="theme-student">
+  <header class="site-header">
+    <a class="brand" href="#"><img class="brand-mark" src="img/dormly-logo.png" alt=""><span class="brand-name">Dormly</span></a>
+    <details class="mobile-menu"><summary>Menu</summary><nav class="site-nav"><a href="#tokens">Tokens</a><a href="#components">Components</a></nav></details>
+    <nav class="site-nav desktop-nav" aria-label="Styleguide sections"><a href="#tokens">Tokens</a><a href="#components">Components</a></nav>
+    <div class="header-user"><strong>Example Student</strong><span class="role-tag role-tag--student">Student</span></div>
+  </header>
+  <main class="page-shell">
+    <section id="tokens">
+      <div class="page-title"><h1>UI Styleguide</h1><a class="btn btn-accent" href="#components">View Components</a></div>
+      <div class="grid grid-12">
+        <article class="card span-8">
+          <div class="card-header"><span class="icon-box"><svg class="icon"><use href="img/icons.svg#dashboard"></use></svg></span><h2>Design Tokens</h2></div>
+          <p>Paper, ink, and calm institutional accents. Borders are square; shadows have hard offsets.</p>
+          <div class="grid form-grid">
+            <div class="card">Ink <code>#0A0A0A</code></div><div class="card">Paper <code>#FBFBFA</code></div>
+            <div class="card" style="background:#FFF200">Student Yellow</div><div class="card" style="background:#00EEFF">Warden Cyan</div>
+            <div class="card" style="background:#FF00CC">Attention Magenta</div><div class="card" style="background:#00FF41">Success Green</div>
+          </div>
+        </article>
+        <aside class="card card--info span-4"><h2>Use</h2><p>Color is paired with clear text and never carries meaning alone.</p></aside>
+      </div>
+    </section>
+
+    <section id="components" class="stack" style="margin-top:48px">
+      <div class="card">
+        <h2>Status Badges</h2>
+        <p><span class="badge badge--submitted">Submitted</span> <span class="badge badge--in_progress">In Progress</span>
+          <span class="badge badge--resolved">Resolved</span> <span class="badge badge--closed">Closed</span>
+          <span class="badge badge--reopened">Reopened</span> <span class="badge badge--rejected">Rejected</span></p>
+        <p><span class="priority-marker">■■■ High</span> <span class="priority-marker">■■□ Medium</span> <span class="priority-marker">■□□ Low</span>
+          <span class="overdue-badge"><svg class="icon"><use href="img/icons.svg#clock"></use></svg> OVERDUE</span></p>
+      </div>
+
+      <div class="card">
+        <h2>Buttons</h2>
+        <div class="grid form-grid">
+          <button class="btn btn-primary">Primary</button><button class="btn btn-accent">Accent</button>
+          <button class="btn btn-success">Success</button><button class="btn btn-danger">Danger</button>
+          <button class="btn btn-secondary">Secondary</button><button class="btn btn-secondary btn-sm">Small</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Form Fields</h2>
+        <div class="grid form-grid">
+          <div class="field"><label for="demo-name">Full Name <span class="required-mark"></span></label><input id="demo-name" placeholder="Enter a name"><small class="field-hint">Use the name on your account.</small></div>
+          <div class="field field--error"><label for="demo-email">Email Address</label><input id="demo-email" value="invalid"><small class="field-error" role="alert">! Enter a valid email address.</small></div>
+          <div class="field"><label for="demo-select">Category</label><select id="demo-select"><option>Electrical</option><option>Plumbing/Water</option></select></div>
+          <div class="field"><label for="demo-textarea">Description</label><textarea id="demo-textarea" maxlength="120" data-demo-counter></textarea><small class="field-hint"><span data-char-count>0 / 120</span></small></div>
+          <div class="field"><label for="demo-file">Image</label><input id="demo-file" type="file"><small class="file-name" data-file-name>No file selected</small><small class="field-hint">JPG or PNG, maximum 2 MB.</small></div>
+          <fieldset class="field"><legend class="label">Rating</legend><div class="rating-options">
+            <input id="rating-1" name="demo-rating" type="radio" value="1"><label for="rating-1">1</label>
+            <input id="rating-2" name="demo-rating" type="radio" value="2"><label for="rating-2">2</label>
+            <input id="rating-3" name="demo-rating" type="radio" value="3"><label for="rating-3">3</label>
+            <input id="rating-4" name="demo-rating" type="radio" value="4"><label for="rating-4">4</label>
+            <input id="rating-5" name="demo-rating" type="radio" value="5"><label for="rating-5">5</label>
+          </div></fieldset>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Stat Panel</h2>
+        <div class="stat-panel">
+          <div class="stat-tile"><span class="stat-number">48</span><span class="stat-label">Total</span></div>
+          <div class="stat-tile"><span class="stat-number stat-number--pending">9</span><span class="stat-label">Pending</span></div>
+          <div class="stat-tile"><span class="stat-number stat-number--progress">12</span><span class="stat-label">In Progress</span></div>
+          <div class="stat-tile"><span class="stat-number stat-number--resolved">24</span><span class="stat-label">Resolved</span></div>
+          <div class="stat-tile"><span class="stat-number stat-number--overdue">4</span><span class="stat-label">Overdue</span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Tabs and Table</h2>
+        <nav class="tabs" aria-label="Example filters"><a href="#components" aria-current="page">All</a><a href="#components">Submitted</a><a href="#components">Resolved</a></nav>
+        <div class="table-wrap" style="margin-top:16px"><table>
+          <thead><tr><th scope="col">ID</th><th scope="col">Category</th><th scope="col">Status</th></tr></thead>
+          <tbody><tr><td>#0042</td><td>Electrical</td><td><span class="badge badge--in_progress">In Progress</span></td></tr></tbody>
+        </table></div>
+      </div>
+
+      <div class="card">
+        <span class="corner-label">Official</span>
+        <h2>Complaint Card and Timeline</h2>
+        <article class="complaint-card overdue-row">
+          <div class="complaint-card__head"><strong class="mono">#0042</strong><span class="badge badge--submitted">Submitted</span></div>
+          <h3>Water supply issue in the east wing</h3><p class="muted">Plumbing/Water · Room A-204</p>
+          <span class="priority-marker">■■■ High</span>
+        </article>
+        <ol class="timeline" style="margin-top:24px">
+          <li class="timeline-item"><span class="timeline-node"></span><span class="badge badge--submitted">Submitted</span><p class="muted mono">15 Nov 2026, 9:05 am</p><p>by Example Student</p></li>
+          <li class="timeline-item"><span class="timeline-node"></span><span class="badge badge--in_progress">In Progress</span><p class="muted mono">15 Nov 2026, 10:15 am</p><p>by Warden's Office</p><p>Assigned for inspection.</p></li>
+        </ol>
+      </div>
+
+      <div class="grid grid-12">
+        <div class="banner span-6"><strong>Information</strong><span>Official notices from the Warden's Office.</span></div>
+        <div class="flash flash--success span-6" role="status"><strong>Success</strong><span>Your changes have been saved.</span></div>
+        <div class="flash flash--error span-6" role="alert"><strong>Error</strong><span>Review the highlighted fields.</span></div>
+        <div class="flash flash--info span-6" role="status"><strong>Notice</strong><span>Your account is awaiting approval.</span></div>
+      </div>
+      <div class="empty-state"><p>No complaints found.</p><a href="#tokens">Return to top</a></div>
+
+      <div class="card">
+        <h2>Confirmation Dialog</h2>
+        <form action="#components" method="get" data-confirm="Delete this example item?"><button class="btn btn-danger" type="submit">Delete Example</button></form>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">Dormly · Hostel Complaint Management System</footer>
+  <dialog data-confirm-dialog aria-labelledby="confirm-title">
+    <h2 id="confirm-title">Confirm Action</h2><p data-confirm-message></p>
+    <div class="dialog-actions"><button class="btn btn-secondary" type="button" data-confirm-cancel>Cancel</button><button class="btn btn-danger" type="button" data-confirm-submit>Confirm</button></div>
+  </dialog>
+</body>
+</html>

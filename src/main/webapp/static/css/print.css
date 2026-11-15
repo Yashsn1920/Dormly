@@ -1,0 +1,13 @@
+@page { size: A4; margin: 16mm; }
+
+@media print {
+  body { color: #000; background: #fff !important; font-size: 10pt; }
+  body, body * { box-shadow: none !important; text-shadow: none !important; }
+  .site-header, .site-footer, .btn, button, form, nav, .no-print, .flash { display: none !important; }
+  .print-only { display: block !important; }
+  .page-shell, .public-shell { width: 100%; min-height: 0; margin: 0; }
+  .card, .table-wrap, table { border-color: #000; break-inside: avoid; }
+  a { color: #000; text-decoration: none; }
+  a[href]::after { content: none !important; }
+  * { background: transparent !important; color: #000 !important; }
+}

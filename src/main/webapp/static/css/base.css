@@ -1,0 +1,56 @@
+* { box-sizing: border-box; border-radius: 0; }
+
+html { min-width: 320px; }
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background-color: var(--canvas);
+  background-image: radial-gradient(rgba(10, 10, 10, .18) 1px, transparent 1px);
+  background-size: 26px 26px;
+  font: 400 1rem/1.5 var(--font-body);
+}
+
+body, input, select, textarea, button { font-family: var(--font-body); }
+
+h1, h2, h3, .display {
+  font-family: var(--font-display);
+  line-height: 1.15;
+  letter-spacing: -.01em;
+}
+
+h1 { margin: 0 0 var(--space-5); font-size: 2.25rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.125rem; }
+p { overflow-wrap: anywhere; }
+a { color: var(--ink); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+a:hover { text-decoration-thickness: 3px; }
+img, svg { max-width: 100%; }
+button, input, select, textarea { font: inherit; }
+button, a, input, select, textarea, summary { -webkit-tap-highlight-color: transparent; }
+
+:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 6px var(--accent);
+}
+
+::placeholder { color: var(--placeholder); opacity: 1; }
+
+code, .mono { font-family: var(--font-mono); }
+.muted { color: var(--muted); }
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 640px) {
+  h1 { font-size: 1.75rem; }
+}

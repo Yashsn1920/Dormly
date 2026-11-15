@@ -1,0 +1,65 @@
+@font-face {
+  font-family: "Archivo Black";
+  src: url("../fonts/archivo-black-latin.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("../fonts/space-grotesk-latin.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Space Mono";
+  src: url("../fonts/space-mono-latin-400.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Space Mono";
+  src: url("../fonts/space-mono-latin-700.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: light;
+  --ink: #0A0A0A;
+  --paper: #FBFBFA;
+  --canvas: #EAEDF2;
+  --yellow: #FFF200;
+  --cyan: #00EEFF;
+  --magenta: #FF00CC;
+  --green: #00FF41;
+  --grey-200: #D4D8DE;
+  --muted: #5B6270;
+  --placeholder: #8A90A0;
+  --accent: var(--yellow);
+  --bw-card: 3px;
+  --bw-inner: 2px;
+  --sh-card: 6px 6px 0 var(--ink);
+  --sh-btn: 4px 4px 0 var(--ink);
+  --sh-sm: 3px 3px 0 var(--ink);
+  --font-display: "Archivo Black", "Arial Black", Impact, sans-serif;
+  --font-body: "Space Grotesk", system-ui, "Segoe UI", Arial, sans-serif;
+  --font-mono: "Space Mono", ui-monospace, Consolas, monospace;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+}
+
+body.theme-student { --accent: var(--yellow); }
+body.theme-warden { --accent: var(--cyan); }

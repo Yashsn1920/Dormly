@@ -1,0 +1,5 @@
+/target/
+*.iml
+.idea/
+/hostel-uploads/
+/src/main/resources/app.properties
